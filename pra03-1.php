@@ -179,12 +179,61 @@ for($i=0;$i<21;$i++){
 
 ?>
 
+
+<h2>菱形對角線</h2>
+ <?php 
+ /*控制大小和增加對角線*/
+$size=11;
+if($siz >=3){
+    if($size%2==0){
+    $size++;
+    }
+}else{
+    echo "數字太小,無法畫出菱形";
+
+}
+
+for($i=0;$i<$size;$i++){
+    if($i>floor($size/2)){
+    for($k=0=$k<$i-floor($size/2);k++){
+        echo "&nbsp;";
+    }
+    for(j=0;$j<2*($i-(2*($i-floor($size/2)))))+1;$j++)
+
+        $j1=2*($i-(2*($i-10)))+1;
+    }else{
+        $k1=10-$i;
+        $j1=(2*$i+1);
+    }
+
+    for($k=0;$k<$i-floor($size/2);$k++){
+        echo "&nbsp;";
+    }
+
+    for($j=0;$j<$j1;$j++){
+        echo "*";
+    }
+    echo "<br>";
+
+}
 ?>
+
+
 <h2>矩形</h2>
  <?php 
 
-  for($i=1;i<=5;i++){
-    for($j=1;j<=5;j++)
+  for($i=1;$i<=5;$i++){
+    for($j=1;$j<=5;$j++){
+        if($i==1 || $i==5){
+            echo "*";
+        }else if($j==1 ||$j==5){
+            echo "*";
+        }else{
+            echo "&nbsp;";
+        }
+    }
+    echo "<br>";    
+    
 
 
 
