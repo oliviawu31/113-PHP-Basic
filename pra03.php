@@ -176,27 +176,26 @@ for($i=0;$i<21;$i++){
              2*($i-(2$i-8))+1
              2*(8-$i)+1
              17-2$i */
-
             for($k=0;$k<$i-10;$k++){
-            for($k=0;$k<$i-floor($size/2);$k++){
-                echo "&nbsp;";
-
+                for($k=0;$k<$i-floor($size/2);$k++){
+                    echo "&nbsp;";
+                }
             }
 
             for($j=0;$j<2*($i-(2*($i-10)))+1;$j++){
-            for($j=0;$j<2*($i-(2*($i-floor($size/2))))+1;$j++){
+                for($j=0;$j<2*($i-(2*($i-floor($size/2))))+1;$j++){
                     echo "*";
                 }
                 echo "<br>";
-
-            }else{
-}
-
+            }
+        }else{
             for($k=0;$k<10-$i;$k++){
-            for($k=0;$k<floor($size/2)-$i;$k++){
-                echo "&nbsp;";
+                for($k=0;$k<floor($size/2)-$i;$k++){
+                    echo "&nbsp;";
+                }
             }
-            }
+        }
+    }
 ?>
 
 
