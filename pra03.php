@@ -149,10 +149,64 @@ for($i=0;$i<21;$i++){
 
 }
 ?>
-
-<h2>矩形123</h2>
- 
+<h2>矩形</h2>
  <?php 
+for($i=0;$i<5;$i++){
+    for($j=0;$j<5;$j++){
+        if($i==0 || $i==4){
+            echo "*";    
+        }else if($j==0 || $j==4){
+            echo "*";
+        }else{
+            echo "&nbsp;";
+        }  
+    }
+    echo "<br>";
+
+}
+
+
+?>
+
+<h2>矩形含對角線練習</h2>
+ <?php 
+ /*奇數*/
+
+for($i=0;$i<5;$i++){
+    for($j=0;$j<5;$j++){
+        if($i==0 || $i==4){
+            echo "*";    
+        }else if($j==0 || $j==4){
+            echo "*";
+        }else if($i==$j ||$j==(4-$i)){
+            echo "*";
+        }else{
+            echo "&nbsp;";
+        }  
+    }
+    echo "<br>";
+}
+
+?>
+
+<h2>矩形含對角線練習</h2>
+ <?php 
+ /*偶數*/
+
+for($i=0;$i<6;$i++){
+    for($j=0;$j<6;$j++){
+        if($i==0 || $i==5){
+            echo "*";    
+        }else if($j==0 || $j==5){
+            echo "*";
+        }else if($i==$j ||$j==(5-$i)){
+            echo "*";
+        }else{
+            echo "&nbsp;";
+        }  
+    }
+    echo "<br>";
+}
 
 ?>
 
