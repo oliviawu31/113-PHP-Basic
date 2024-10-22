@@ -18,6 +18,5 @@ if($score>=60){
 
 ?>
 
-
 </body>
 </html>
