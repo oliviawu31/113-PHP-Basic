@@ -123,19 +123,19 @@ for($i=0;$i<5;$i++){
 </ul>
 <style>
     table{
-        border-collapse:collapse;
+        border-collapse:collapse;/* 合併邊框 */
 
     }
     td{
-        padding:5px 10px;
-        text-align: center;
-        border:1px solid #999;
+        padding:5px 10px; /* 單元格內部填充 */
+        text-align: center; /* 文字置中 */
+        border:1px solid #999; /* 單元格邊框 */
     }
 </style>
-<h3><?php echo date("m月");?></h3>
+<h3><?php echo date("m月");?></h3> <!-- 顯示當前月份 -->
 <table>
 <tr>
-    <td></td>
+    <td></td><!-- 空白單元格，用於對齊 -->
     <td>日</td>
     <td>一</td>
     <td>二</td>
@@ -145,16 +145,18 @@ for($i=0;$i<5;$i++){
     <td>六</td>
 </tr>
 <?php
-$d=strtotime("2024-6");
-for($i=0;$i<6;$i++){
-    echo "<tr>";
-    echo "<td>";
-    echo $i+1;
+$d=strtotime("2024-6");// 將特定日期轉換為時間戳，這裡是 2024 年 6 月
+$firstDayWeek=date("w",strtotime(date("Y-m-1")));
+// echo $firstDayWeek;
+for($i=0;$i<6;$i++){// 生成六行
+    echo "<tr>"; // 開始一行
+    echo "<td>";// 開始一個單元格
+    echo $i+1;// 顯示行數，從 1 開始
     echo "</td>";
-    for($j=0;$j<7;$j++){
+    for($j=0;$j<7;$j++){// 生成七列，對應一週的七天
         echo "<td>";
-        $dayNum=$i*7 + $j +1;
-        if($dayNum<=date('t')){
+        $dayNum=$i*7 + $j + 1 - $firstDayWeek;// 計算當前的日期數字
+        if($dayNum<=date('t') && $dayNum >0){// 如果當前日期小於等於當月的總天數
             echo $dayNum;
         }
         echo "</td>";
@@ -164,8 +166,6 @@ for($i=0;$i<6;$i++){
 
 
 }
-
-
 
 ?>
 </table>
