@@ -288,12 +288,14 @@ for($i=1;$i<=9;$i++){
 
     }
 }
+// 顯示完整的九九乘法表陣
     echo "<pre>";
     print_r($nine2);
     echo "</pre>";
 
     echo "<hr>";
 
+    // 使用計數器來控制每行顯示的項目數量
     $counter=0;
 foreach($nine2 as $key => $n){
     $counter++;
